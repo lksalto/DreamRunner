@@ -589,7 +589,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 659555359}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4, y: 0, z: 0}
+  m_LocalPosition: {x: 2.23, y: -0.03, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -610,7 +610,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.037438378, y: -0.07375157}
+  m_Offset: {x: 0.037438378, y: -0.061176494}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -621,7 +621,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.37611136, y: 0.7424288}
+  m_Size: {x: 0.37611136, y: 0.7172786}
   m_EdgeRadius: 0
 --- !u!50 &659555363
 Rigidbody2D:
@@ -662,8 +662,8 @@ MonoBehaviour:
   groundCheck: {fileID: 1454742774}
   groundObjects:
     serializedVersion: 2
-    m_Bits: 64
-  checkRadius: 0.02
+    m_Bits: 72
+  checkRadius: 0.08
 --- !u!1 &681877415
 GameObject:
   m_ObjectHideFlags: 0
@@ -1138,7 +1138,7 @@ GameObject:
   - component: {fileID: 1208322084}
   - component: {fileID: 1208322085}
   - component: {fileID: 1208322086}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player_acordado_teste
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1174,7 +1174,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.055469796, y: -0.05427076}
+  m_Offset: {x: 0.055469796, y: -0.052588955}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1185,7 +1185,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.34652337, y: 0.6914586}
+  m_Size: {x: 0.34652337, y: 0.6948222}
   m_EdgeRadius: 0
 --- !u!212 &1208322083
 SpriteRenderer:
@@ -1273,7 +1273,7 @@ MonoBehaviour:
   groundObjects:
     serializedVersion: 2
     m_Bits: 64
-  checkRadius: 0.02
+  checkRadius: 0.08
 --- !u!50 &1208322086
 Rigidbody2D:
   serializedVersion: 4
@@ -1352,7 +1352,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1454742773}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.453, z: 0}
+  m_LocalPosition: {x: 0, y: -0.411, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
