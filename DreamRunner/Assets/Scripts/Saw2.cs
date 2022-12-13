@@ -82,6 +82,16 @@ public class Saw2 : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
+        if (Input.GetKeyDown("e")) 
+        {
+            if(collision.gameObject.CompareTag("Dream") || 
+                collision.gameObject.CompareTag("Wake")) 
+            {
+                collision.transform.SetParent(null);
+            }
+        } else
+        
         //coloca player pra andar junto
         collision.transform.SetParent(transform);
 

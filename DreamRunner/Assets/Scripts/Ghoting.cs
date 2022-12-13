@@ -8,6 +8,7 @@ public class Ghoting : MonoBehaviour
     private bool minion;
     private Player_Movement playerscript;
     public float returnspeed;
+    private bool returned;
     
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,7 @@ public class Ghoting : MonoBehaviour
                 ativar[i].GetComponent<Transform>().position = Vector3.MoveTowards(ativar[i].transform.position, transform.position, returnspeed * Time.deltaTime);
                 if (ativar[i].transform.position == transform.position)
                 {
+                    returned = true;
                     ativar[i].SetActive(false);
                 }
             }
@@ -46,7 +48,7 @@ public class Ghoting : MonoBehaviour
                     
                         ativar[i].GetComponent<Collider2D>().enabled = false;
                         ativar[i].GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
-                    
+                    returned = false;
 
                 }
                 else
@@ -57,7 +59,7 @@ public class Ghoting : MonoBehaviour
                         ativar[i].GetComponent<Collider2D>().enabled = true;
                         ativar[i].GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
                         ativar[i].SetActive(true);
-                        ativar[i].transform.position = transform.position;
+                        if(returned)ativar[i].transform.position = transform.position;
                     
                 }
             }

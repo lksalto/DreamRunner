@@ -17,9 +17,12 @@ public class Player_Movement : MonoBehaviour
     private float moveDirection;
     private bool isJumping = false;
     private bool isGrounded;
+
+    private Animator anim;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>(); 
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -61,9 +64,15 @@ public class Player_Movement : MonoBehaviour
     private void Animar()
     {
         if (moveDirection > 0 && !isFacingRight)
+        {
             FlipCharacter();
+            anim.SetBool("walking", true);
+        }
         else if (moveDirection < 0 && isFacingRight)
+        {
             FlipCharacter();
+            anim.SetBool("walking", true);
+        } else if (moveDirection == 0)anim.SetBool("walking", false);
     }
 
     private void ProcessarInputs()

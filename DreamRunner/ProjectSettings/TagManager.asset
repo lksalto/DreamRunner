@@ -3,16 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Wake
+  - Dream
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Player
+  - "N\xE3o coloque nada aqui"
   - Water
   - UI
   - "ch\xE3o"
-  - 
+  - Player
   - 
   - 
   - 
