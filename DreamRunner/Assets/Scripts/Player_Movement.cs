@@ -81,8 +81,6 @@ public class Player_Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             isJumping = true;
-            Debug.Log("isGrounded = " + isGrounded.ToString());
-            Debug.Log("JumpCount = " + jumpCount.ToString());
         }
     }
 
