@@ -7,6 +7,7 @@ public class Ghoting : MonoBehaviour
     public GameObject[] ativar;
     private bool minion;
     private Player_Movement playerscript;
+    private AndaInfinito AndaInfinito;
     public float returnspeed;
     private bool returned;
     
@@ -14,6 +15,7 @@ public class Ghoting : MonoBehaviour
     void Start()
     {
         playerscript = GetComponent<Player_Movement>();
+        AndaInfinito = GetComponent<AndaInfinito>();
     }
 
     // Update is called once per frame
@@ -65,6 +67,7 @@ public class Ghoting : MonoBehaviour
             }
             minion = !minion;
             playerscript.enabled = !minion;
+            AndaInfinito.enabled = minion;
         }
     }
 }
