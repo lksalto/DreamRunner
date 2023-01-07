@@ -17,6 +17,7 @@ public class Saw2 : MonoBehaviour
 
     public float fall_time;
     public float respawn_time;
+    public float TopPositionFromPivot;
 
     public bool waiting;
     public bool returning;
@@ -83,17 +84,21 @@ public class Saw2 : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if (Input.GetKeyDown("e")) 
+        if (Input.GetKeyDown("e"))
         {
-            if(collision.gameObject.CompareTag("Dream") || 
-                collision.gameObject.CompareTag("Wake")) 
+            if (collision.gameObject.CompareTag("Dream") ||
+                collision.gameObject.CompareTag("Wake"))
             {
                 collision.transform.SetParent(null);
             }
-        } else
-        
+        }
+        else
+
         //coloca player pra andar junto
-        collision.transform.SetParent(transform);
+        if (collision.transform.position.y > transform.position.y + TopPositionFromPivot)
+        {
+            collision.transform.SetParent(transform);
+        }
 
         if (!touched) { timer = fall_time; }
         touched = true;
