@@ -14,6 +14,8 @@ public class Button : MonoBehaviour
     public float RespawnTime;
     private float timer;
 
+    private int ColNumber = 0;
+
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -29,6 +31,10 @@ public class Button : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        ColNumber++;
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
         if (!pressed)
         {
             for(int i = 0; i < ativar.Length; i++) 
@@ -38,17 +44,17 @@ public class Button : MonoBehaviour
         pressed = true;
         timer = 0f;
         }
-        anim.SetBool("Pressed", true);
+        anim.SetBool("Pressed", true);       
         
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (Stayer&&!StayerPressed)
+        if (Stayer&&!StayerPressed&&ColNumber<2)
         {
             Invoke("StayerExit",RespawnTime);
             StayerPressed = true;
         }
-
+        ColNumber--;
 
     }
     void StayerExit()

@@ -9,7 +9,7 @@ public class Player_Movement : MonoBehaviour
     public int maxjumpCount = 1;
     public Transform groundCheck;
     public LayerMask groundObjects;
-    public LayerMask OtherWorld;
+    //public LayerMask OtherWorld;
     public float checkRadius;
 
     private int jumpCount;
@@ -35,9 +35,9 @@ public class Player_Movement : MonoBehaviour
         //Animar
         Animar();
 
-        //Faz com que não hja colisões entre osplayers e os mundos
+        /*/Faz com que não hja colisões entre os players e os mundos
         Physics2D.IgnoreLayerCollision(7, 9, true);
-        Physics2D.IgnoreLayerCollision(8, 10, true);
+        Physics2D.IgnoreLayerCollision(8, 10, true);*/
 
     }
 

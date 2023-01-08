@@ -61,7 +61,10 @@ public class Ghoting : MonoBehaviour
                         ativar[i].GetComponent<Collider2D>().enabled = true;
                         ativar[i].GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
                         ativar[i].SetActive(true);
-                        if(returned)ativar[i].transform.position = transform.position;
+                    if (returned)
+                    {
+                        ativar[i].transform.position = transform.position;
+                    }
                     
                 }
             }
