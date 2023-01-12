@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Wake
   - Dream
+  - Spike
+  - Mario
   layers:
   - Default
   - TransparentFX
