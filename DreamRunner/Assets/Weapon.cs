@@ -18,7 +18,7 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Sword1.activeSelf) 
+        if (Sword1.activeSelf&& !sword1active) 
         {
             Sword2.SetActive(false);
             sword1active = true;
