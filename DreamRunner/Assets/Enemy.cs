@@ -5,16 +5,35 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float life;
+    public GameObject[] WhenDead;
+    public Behaviour[] beh;
+    private SpriteRenderer sr;
+    //private Collider2D Col;
+    private bool dead;
     // Start is called before the first frame update
     void Start()
     {
-        
+        sr = GetComponent<SpriteRenderer>();
+        //Col = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (life <= 0 && !dead)
+        {
+            dead = true;
+            sr.enabled = false;
+            //Col.enabled = false;
+            for (int i = 0; i < WhenDead.Length; i++)
+            {
+                WhenDead[i].SetActive(!WhenDead[i].activeSelf);
+            }
+            for (int i = 0; i < beh.Length; i++)
+            {
+                beh[i].enabled = !beh[i].enabled;
+            }
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

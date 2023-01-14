@@ -8,6 +8,7 @@ public class Saw2point : MonoBehaviour
     public Transform posB;
     public GameObject saw;
     public float speed;
+    public bool InvertSprite;
     //public bool enabler;
     //public Saw2 saww;
 
@@ -23,6 +24,13 @@ public class Saw2point : MonoBehaviour
     {
         if (saw.transform.position == transform.position) 
         {
+            //InverteSpriteRenderer
+            if (InvertSprite)
+            {
+                saw.GetComponent<SpriteRenderer>().flipX = !saw.GetComponent<SpriteRenderer>().flipX;
+            }
+
+
             saw.GetComponent<Saw2>().speed = speed;
             saw.GetComponent<Saw2>().passed = true;
             /*if (saw.GetComponent<Saw2>().faller && enabler) 

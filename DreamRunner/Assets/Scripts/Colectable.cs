@@ -7,6 +7,7 @@ public class Colectable : MonoBehaviour
     private SpriteRenderer sr;
     private Collider2D col;
     public GameObject[] Colects;
+    public float lifeadd;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,7 @@ public class Colectable : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("Player"))
         {
+            collider.GetComponent<Life>().life += lifeadd;
             //dissapear?
             sr.enabled = false;
             col.enabled = false;
