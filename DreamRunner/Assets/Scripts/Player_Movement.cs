@@ -35,9 +35,7 @@ public class Player_Movement : MonoBehaviour
         //Animar
         Animar();
 
-        /*/Faz com que não hja colisões entre os players e os mundos
-        Physics2D.IgnoreLayerCollision(7, 9, true);
-        Physics2D.IgnoreLayerCollision(8, 10, true);*/
+        
 
     }
 
