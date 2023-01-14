@@ -15,10 +15,6 @@ public class swordSpecial : MonoBehaviour
     private int position;
     public bool flipped;
 
-    public bool teste;
-    public float test;
-    public float test2;
-
     void Update()
     {
         if(transform.localEulerAngles.y ==180)transform.Rotate(-180f,0f,0f);
@@ -47,7 +43,7 @@ public class swordSpecial : MonoBehaviour
         if(transform.position == StartPos.position) Swordclicked = new Vector3(transform.position.x+Distance,transform.position.y,transform.position.z);
 
         //se o mouse estiver pressionado
-        if (Input.GetMouseButton(0)/*&&position==2*/) 
+        if (Input.GetMouseButton(0)&&position==2) 
         {
             transform.SetParent(ghost.transform.parent);
             //Vai até a posição final
@@ -55,5 +51,7 @@ public class swordSpecial : MonoBehaviour
         }
         //Se não volta pra inicial
         else transform.position = Vector3.MoveTowards(transform.position, StartPos.position, speed * Time.deltaTime);
+        //Só volta clicando com o direito
+        ///if(Input.GetMouseButton(1)) { transform.position = Vector3.MoveTowards(transform.position, StartPos.position, speed * Time.deltaTime); }
     }
 }
