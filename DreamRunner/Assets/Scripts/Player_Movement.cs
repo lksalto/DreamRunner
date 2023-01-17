@@ -10,7 +10,7 @@ public class Player_Movement : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundObjects;
     //public LayerMask OtherWorld;
-    public float checkRadius;
+    public Vector2 boxSize = new (1,1);
 
     private int jumpCount;
     private Rigidbody2D rb;
@@ -43,7 +43,8 @@ public class Player_Movement : MonoBehaviour
     private void FixedUpdate()
     {
         //verifica se o player está no chão
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundObjects);
+        //isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundObjects);
+        isGrounded = Physics2D.OverlapBox(groundCheck.position, boxSize, 0f, groundObjects);
 
         if (isGrounded)
         {
@@ -59,6 +60,9 @@ public class Player_Movement : MonoBehaviour
         rb.velocity = new Vector2(moveDirection * moveSpeed, rb.velocity.y);
         if (isJumping && jumpCount > 0)
         {
+            Vector2 temp = rb.velocity;
+            temp[1] = 0f;
+            rb.velocity = temp;
             rb.AddForce(new Vector2(0f, jumpForce));
             jumpCount--;
         }
