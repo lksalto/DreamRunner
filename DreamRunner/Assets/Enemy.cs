@@ -34,7 +34,7 @@ public class Enemy : MonoBehaviour
             }
             for (int i = 0; i < beh.Length; i++)
             {
-                beh[i].enabled = !beh[i].enabled;
+                beh[i].enabled = false;//!beh[i].enabled;
             }
         }
     }

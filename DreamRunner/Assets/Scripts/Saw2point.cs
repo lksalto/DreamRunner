@@ -8,7 +8,8 @@ public class Saw2point : MonoBehaviour
     public Transform posB;
     public GameObject saw;
     public float speed;
-    public bool InvertSprite;
+    public bool Invert;
+    public int InvertLado=1;
     //public bool enabler;
     //public Saw2 saww;
 
@@ -25,9 +26,10 @@ public class Saw2point : MonoBehaviour
         if (saw.transform.position == transform.position) 
         {
             //InverteSpriteRenderer
-            if (InvertSprite)
+            if (Invert)
             {
-                saw.GetComponent<SpriteRenderer>().flipX = !saw.GetComponent<SpriteRenderer>().flipX;
+                saw.transform.Rotate(0f, 180f*InvertLado, 0f);
+                //saw.transform.localEulerAngles = new Vector3(0f,180f,0f);
             }
 
 
