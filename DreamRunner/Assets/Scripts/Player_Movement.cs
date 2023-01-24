@@ -10,7 +10,7 @@ public class Player_Movement : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundObjects;
     //public LayerMask OtherWorld;
-    public Vector2 boxSize = new (1,1);
+    public Vector3 boxSize = new (0.005f,0.005f, 0);
 
     private int jumpCount;
     private Rigidbody2D rb;

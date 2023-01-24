@@ -354,14 +354,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8194353907a5594c8f822f918b326e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpForce: 300
+  moveSpeed: 250
+  jumpForce: 6
   maxjumpCount: 1
   groundCheck: {fileID: 1454742774}
   groundObjects:
     serializedVersion: 2
     m_Bits: 64
-  checkRadius: 0.2
+  boxSize: {x: 0.005, y: 0.005, z: 0}
 --- !u!1 &1038050038
 GameObject:
   m_ObjectHideFlags: 0

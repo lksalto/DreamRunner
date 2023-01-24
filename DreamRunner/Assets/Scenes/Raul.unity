@@ -1344,13 +1344,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 250
-  jumpForce: 5
+  jumpForce: 6
   maxjumpCount: 2
   groundCheck: {fileID: 1454742774}
   groundObjects:
     serializedVersion: 2
     m_Bits: 192
-  boxSize: {x: 0, y: 0}
+  boxSize: {x: 0, y: 0, z: 0}
 --- !u!95 &659555365
 Animator:
   serializedVersion: 4
@@ -2437,7 +2437,7 @@ MonoBehaviour:
   groundObjects:
     serializedVersion: 2
     m_Bits: 64
-  boxSize: {x: 1, y: 1}
+  boxSize: {x: 1, y: 1, z: 0}
 --- !u!50 &1208322086
 Rigidbody2D:
   serializedVersion: 4

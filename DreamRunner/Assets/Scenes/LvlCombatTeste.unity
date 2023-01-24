@@ -2605,14 +2605,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8194353907a5594c8f822f918b326e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 250
-  jumpForce: 5
+  moveSpeed: 175
+  jumpForce: 6
   maxjumpCount: 8
   groundCheck: {fileID: 1454742774}
   groundObjects:
     serializedVersion: 2
     m_Bits: 704
-  boxSize: {x: 1, y: 1}
+  boxSize: {x: 1, y: 1, z: 0}
 --- !u!95 &659555365
 Animator:
   serializedVersion: 4
@@ -3012,7 +3012,7 @@ MonoBehaviour:
   groundObjects:
     serializedVersion: 2
     m_Bits: 704
-  boxSize: {x: 1, y: 1}
+  boxSize: {x: 1, y: 1, z: 0}
 --- !u!212 &800113207
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4242,14 +4242,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8194353907a5594c8f822f918b326e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  jumpForce: 200
+  moveSpeed: 100
+  jumpForce: 3
   maxjumpCount: 2
   groundCheck: {fileID: 1778648238}
   groundObjects:
     serializedVersion: 2
     m_Bits: 320
-  boxSize: {x: 1, y: 1}
+  boxSize: {x: 1, y: 1, z: 0}
 --- !u!50 &1208322086
 Rigidbody2D:
   serializedVersion: 4
