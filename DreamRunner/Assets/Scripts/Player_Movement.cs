@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player_Movement : MonoBehaviour
 {
@@ -89,6 +90,11 @@ public class Player_Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             isJumping = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            SceneManager.LoadScene("Menu");
         }
     }
 
