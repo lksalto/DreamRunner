@@ -757,7 +757,8 @@ MonoBehaviour:
   posB: {fileID: 1019218165}
   saw: {fileID: 1622880630}
   speed: 5
-  InvertSprite: 0
+  Invert: 0
+  InvertLado: 1
 --- !u!1 &376174764
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,7 +958,8 @@ MonoBehaviour:
   posB: {fileID: 1131152532}
   saw: {fileID: 955697392}
   speed: 1
-  InvertSprite: 0
+  Invert: 0
+  InvertLado: 1
 --- !u!1 &429654014
 GameObject:
   m_ObjectHideFlags: 0
@@ -1006,7 +1008,8 @@ MonoBehaviour:
   posB: {fileID: 884797646}
   saw: {fileID: 327737956}
   speed: 1
-  InvertSprite: 0
+  Invert: 0
+  InvertLado: 1
 --- !u!1 &440977759
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,7 +1058,8 @@ MonoBehaviour:
   posB: {fileID: 796795713}
   saw: {fileID: 61648127}
   speed: 1
-  InvertSprite: 0
+  Invert: 0
+  InvertLado: 1
 --- !u!1 &457142009
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,8 +1343,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8194353907a5594c8f822f918b326e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpForce: 250
+  moveSpeed: 250
+  jumpForce: 5
   maxjumpCount: 2
   groundCheck: {fileID: 1454742774}
   groundObjects:
@@ -1525,7 +1529,8 @@ MonoBehaviour:
   posB: {fileID: 1347851868}
   saw: {fileID: 1622880630}
   speed: 3
-  InvertSprite: 0
+  Invert: 0
+  InvertLado: 1
 --- !u!1 &796795712
 GameObject:
   m_ObjectHideFlags: 0
@@ -1574,7 +1579,8 @@ MonoBehaviour:
   posB: {fileID: 457142010}
   saw: {fileID: 61648127}
   speed: 5
-  InvertSprite: 0
+  Invert: 0
+  InvertLado: 1
 --- !u!1 &834418450
 GameObject:
   m_ObjectHideFlags: 0
@@ -1724,7 +1730,8 @@ MonoBehaviour:
   posB: {fileID: 1201774698}
   saw: {fileID: 327737956}
   speed: 5
-  InvertSprite: 0
+  Invert: 0
+  InvertLado: 1
 --- !u!1 &921407842
 GameObject:
   m_ObjectHideFlags: 0
@@ -2239,7 +2246,8 @@ MonoBehaviour:
   posB: {fileID: 1163069959}
   saw: {fileID: 955697392}
   speed: 5
-  InvertSprite: 0
+  Invert: 0
+  InvertLado: 1
 --- !u!1 &1163069958
 GameObject:
   m_ObjectHideFlags: 0
@@ -2422,8 +2430,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8194353907a5594c8f822f918b326e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  jumpForce: 200
+  moveSpeed: 150
+  jumpForce: 3
   maxjumpCount: 1
   groundCheck: {fileID: 1778648238}
   groundObjects:
@@ -2559,7 +2567,8 @@ MonoBehaviour:
   posB: {fileID: 440977760}
   saw: {fileID: 61648127}
   speed: 3
-  InvertSprite: 0
+  Invert: 0
+  InvertLado: 1
 --- !u!1 &1287330554
 GameObject:
   m_ObjectHideFlags: 0
@@ -2661,7 +2670,8 @@ MonoBehaviour:
   posB: {fileID: 381329658}
   saw: {fileID: 955697392}
   speed: 3
-  InvertSprite: 0
+  Invert: 0
+  InvertLado: 1
 --- !u!1 &1339480304
 GameObject:
   m_ObjectHideFlags: 0
@@ -2746,7 +2756,8 @@ MonoBehaviour:
   posB: {fileID: 353703766}
   saw: {fileID: 1622880630}
   speed: 1
-  InvertSprite: 0
+  Invert: 0
+  InvertLado: 1
 --- !u!1 &1454742773
 GameObject:
   m_ObjectHideFlags: 0
@@ -3067,7 +3078,8 @@ MonoBehaviour:
   posB: {fileID: 429654015}
   saw: {fileID: 327737956}
   speed: 3
-  InvertSprite: 0
+  Invert: 0
+  InvertLado: 1
 --- !u!1 &1619019695
 GameObject:
   m_ObjectHideFlags: 0
@@ -3560,7 +3572,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2127871195}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.87, y: 0.61, z: 0.010113345}
+  m_LocalPosition: {x: -3.53, y: -1.61, z: 0.010113345}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
