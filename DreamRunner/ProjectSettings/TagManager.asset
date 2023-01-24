@@ -9,6 +9,7 @@ TagManager:
   - Spike
   - Mario
   - Enemy
+  - Box
   layers:
   - Default
   - TransparentFX

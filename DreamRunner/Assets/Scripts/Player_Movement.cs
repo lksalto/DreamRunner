@@ -57,13 +57,13 @@ public class Player_Movement : MonoBehaviour
 
     private void Mover()
     {
-        rb.velocity = new Vector2(moveDirection * moveSpeed, rb.velocity.y);
+        rb.velocity = new Vector2(moveDirection * moveSpeed * Time.deltaTime, rb.velocity.y);
         if (isJumping && jumpCount > 0)
         {
             Vector2 temp = rb.velocity;
             temp[1] = 0f;
             rb.velocity = temp;
-            rb.AddForce(new Vector2(0f, jumpForce));
+            rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             jumpCount--;
         }
         isJumping = false;
