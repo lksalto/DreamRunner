@@ -10,12 +10,14 @@ public class Enemy : MonoBehaviour
     public Behaviour[] beh;
     public Text text;
     private SpriteRenderer sr;
+    private Rigidbody2D rb;
     //private Collider2D Col;
     private bool dead;
     // Start is called before the first frame update
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        rb= GetComponent<Rigidbody2D>();
         //Col = GetComponent<Collider2D>();
     }
 
@@ -27,6 +29,7 @@ public class Enemy : MonoBehaviour
         {
             dead = true;
             sr.enabled = false;
+            rb.bodyType = RigidbodyType2D.Kinematic;
             //Col.enabled = false;
             for (int i = 0; i < WhenDead.Length; i++)
             {

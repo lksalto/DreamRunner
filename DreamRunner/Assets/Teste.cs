@@ -4,36 +4,65 @@ using UnityEngine;
 
 public class Teste : MonoBehaviour
 {
-    public bool bool1;
-    public bool bool2;
-    public bool bool3;
-    public float float1;
-    public float float2;
-    public float float3;
-    public float transformx;
-    public float transformy;
-    public float transformz;
-    public float transformlocalx;
-    public float transformlocaly;
-    public float transformlocalz;
+    public Transform jumpheight;
+    public float jumpspeed=4;
+    public float jumpspeedbackup;
+    public float gravity;
+    public float Timer=0;
+
+    public float Hspeed=3;
+
+    public Vector3 mousepos;
+    public Vector3 mousexpos;
+    public Transform StartPos;
+    public int jumped;
     // Start is called before the first frame update
     void Start()
     {
-        
+        jumpspeedbackup=jumpspeed;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transformx = transform.eulerAngles.x;
-        transformy = transform.eulerAngles.y;
-        transformz = transform.eulerAngles.z;
-        transformlocalx = transform.localEulerAngles.x;
-        transformlocaly = transform.localEulerAngles.y;
-        transformlocalz = transform.localEulerAngles.z;
-        if (bool1) { transform.Rotate(float1, float2, float3); bool1 = false; }
-        if (bool2) { transform.eulerAngles += new Vector3(float1, float2, float3); bool2 = false; }
-        if (transformy == 180) bool3 = true; else bool3 = false;
-        //if (bool3) { transform.Rotate(float1, float2, float3); }
+        mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousepos.z = 0f;
+        mousexpos = new Vector3(mousepos.x, transform.position.y, 0f);
+        Jump();
+        Move();
+    }
+    private void Move()
+    {
+        if (Input.GetMouseButton(0)) 
+        {
+            transform.position = Vector3.MoveTowards(transform.position, mousexpos, Hspeed * Time.deltaTime);
+        }
+    }
+    void Jump() 
+    {
+        if (jumpspeed < 0f) { jumpspeed = 0f; jumped = 1; }
+        if (Input.GetButton("Jump") && jumped != 1)
+        {
+            Timer+=Time.deltaTime;
+            jumpspeed -= gravity * Time.deltaTime;
+            jumped = 2;
+            transform.position = Vector3.MoveTowards(transform.position, jumpheight.position, jumpspeed * Time.deltaTime);
+        }
+        if(Input.GetButtonUp("Jump")&&jumped==2)
+        {
+            jumped = 1;
+            jumpspeed -= gravity*Timer;
+        }
+        if(jumped == 1)
+        {
+            jumpspeed += gravity * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, StartPos.position, jumpspeed * Time.deltaTime);
+        }
+        if (transform.position == StartPos.position&&jumped!=0)
+        {
+            jumped = 0;
+            Timer=0;
+            jumpspeed = jumpspeedbackup;
+        }
     }
 }
