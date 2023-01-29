@@ -13,6 +13,11 @@ public class enemyAIcomplex : MonoBehaviour
     public float deaceleration;
     public bool jumped;
 
+    public bool grounded;
+    public Transform Groundcheck;
+    public LayerMask groundlayers;
+    public Vector2 groundbox = new (1, 1);
+
     private void Start()
     {
         mvspdbkup = moveSpeed;
@@ -21,6 +26,8 @@ public class enemyAIcomplex : MonoBehaviour
     }
     private void Update()
     {
+        grounded = Physics2D.OverlapBox(Groundcheck.position, groundbox, 0f, groundlayers);
+
         if (Sight.GetComponent<sight>().SeePlayer)
         {
             moveSpeed = mvspdbkup;
@@ -38,15 +45,16 @@ public class enemyAIcomplex : MonoBehaviour
         {
             rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             jumped = true;
+            Wallfind.GetComponent<EnemyWalFinder>().Walled += 1;
         }
     }
     void AnotherJumpTime()
     {
         jumped = false;
-        Wallfind.GetComponent<EnemyWalFinder>().Walled = 0;
+        Wallfind.GetComponent<EnemyWalFinder>().Walled -= 1;//==2
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 6 && jumped) { AnotherJumpTime(); }
+        if (collision.gameObject.layer == 6 && jumped && grounded) { AnotherJumpTime(); }
     }
 }
