@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8194353907a5594c8f822f918b326e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sm: {fileID: 4821995319025170254}
   moveSpeed: 2
   jumpForce: 200
   maxjumpCount: 2
@@ -254,6 +255,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6975501175747266419}
   - component: {fileID: 6975501175747266420}
+  - component: {fileID: 4821995319025170254}
+  - component: {fileID: -4366018723488989979}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -304,6 +307,129 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   dreaming: 0
+  sm: {fileID: 4821995319025170254}
+--- !u!114 &4821995319025170254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6975501175747266418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 742dcb77478d8b745a076d142e4aa043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpSound:
+  - {fileID: 8300000, guid: 207190155d4d57443b53a4add9217659, type: 3}
+  - {fileID: 8300000, guid: 8876f9b3ca573b84fb92909115dd615d, type: 3}
+  - {fileID: 8300000, guid: 73700c842f8ca32438aaec235207ea32, type: 3}
+  - {fileID: 8300000, guid: cd01c42b30a682940bf62321d22640a1, type: 3}
+  - {fileID: 8300000, guid: ad5c97669b3a7ab448b34759c6fdd308, type: 3}
+  deathSound:
+  - {fileID: 8300000, guid: fe66792d2007b884188c13030b2a5a39, type: 3}
+  - {fileID: 8300000, guid: 546d039d6df6f504ca88662a0851e61a, type: 3}
+  - {fileID: 8300000, guid: d16b2edf68bbc02428ac79d308d3df0b, type: 3}
+  dreamSound:
+  - {fileID: 8300000, guid: c2c1e4ebaace4774dac5dbd68702c6c4, type: 3}
+  - {fileID: 8300000, guid: b1d5247aeacbbb94fae3f717e948224d, type: 3}
+  - {fileID: 8300000, guid: f631152597081bb40a9efffb823e92e0, type: 3}
+--- !u!82 &-4366018723488989979
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6975501175747266418}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &6975501175847305597
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,6 +682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8194353907a5594c8f822f918b326e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sm: {fileID: 4821995319025170254}
   moveSpeed: 250
   jumpForce: 5
   maxjumpCount: 8
@@ -730,6 +857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8194353907a5594c8f822f918b326e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sm: {fileID: 4821995319025170254}
   moveSpeed: 5
   jumpForce: 250
   maxjumpCount: 2

@@ -6,6 +6,7 @@ public class Dream : MonoBehaviour
 {
     public GameObject[] ativar;
     public bool dreaming;
+    [SerializeField] SoundManager sm;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +23,7 @@ public class Dream : MonoBehaviour
         if (Input.GetKeyDown("e"))
         {
             Invoke("acti", 0.01f);
-            
+            sm.PlayDreamSound();
             dreaming = !dreaming;
 
         }
