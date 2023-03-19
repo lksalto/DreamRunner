@@ -29,6 +29,8 @@ public class Saw2 : MonoBehaviour
     public float timer;
     public bool touched;
 
+    private float AndaInfinitobckup;
+
     private void Start()
     {
         boxcol = GetComponent<Collider2D>();
@@ -98,7 +100,13 @@ public class Saw2 : MonoBehaviour
         if (collision.transform.position.y > transform.position.y + TopPositionFromPivot)
         {
             collision.transform.SetParent(transform);
+            
         }
+        if (collision.gameObject.layer == 7) 
+            {
+            AndaInfinitobckup = collision.gameObject.GetComponent<AndaInfinito>().moveSpeed;
+                collision.gameObject.GetComponent<AndaInfinito>().moveSpeed = 0f;                    
+            }
 
         if (!touched) { timer = fall_time; }
         touched = true;
@@ -129,6 +137,10 @@ public class Saw2 : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         collision.transform.SetParent(null);//tira o player
+        if (collision.gameObject.layer == 7&& collision.gameObject.GetComponent<AndaInfinito>().moveSpeed==0f)
+        {
+            collision.gameObject.GetComponent<AndaInfinito>().moveSpeed= AndaInfinitobckup;
+        }
 
         //Se for um waiter manda para a posição anterior e ativa returning
         if (waiter) 

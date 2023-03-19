@@ -35,14 +35,15 @@ public class Enemy : MonoBehaviour
             rb.bodyType = RigidbodyType2D.Kinematic;
             rb.velocity = new Vector3(0f, 0f, 0f);
             //Col.enabled = false;
-            for (int i = 0; i < WhenDead.Length; i++)
-            {
-                WhenDead[i].SetActive(!WhenDead[i].activeSelf);
-            }
             for (int i = 0; i < beh.Length; i++)
             {
                 beh[i].enabled = false;//!beh[i].enabled;
             }
+            for (int i = 0; i < WhenDead.Length; i++)
+            {
+                WhenDead[i].SetActive(!WhenDead[i].activeSelf);
+            }
+            
         }
     }
     /*private void OnTriggerEnter2D(Collider2D collision)

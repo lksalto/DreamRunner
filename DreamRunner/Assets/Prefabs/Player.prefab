@@ -159,7 +159,7 @@ MonoBehaviour:
   groundObjects:
     serializedVersion: 2
     m_Bits: 320
-  boxSize: {x: 1, y: 1}
+  boxSize: {x: 1, y: 1, z: 0}
 --- !u!114 &6975501175668004257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,6 +334,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c2c1e4ebaace4774dac5dbd68702c6c4, type: 3}
   - {fileID: 8300000, guid: b1d5247aeacbbb94fae3f717e948224d, type: 3}
   - {fileID: 8300000, guid: f631152597081bb40a9efffb823e92e0, type: 3}
+  clickSound: []
 --- !u!82 &-4366018723488989979
 AudioSource:
   m_ObjectHideFlags: 0
@@ -689,8 +690,8 @@ MonoBehaviour:
   groundCheck: {fileID: 6975501175847305598}
   groundObjects:
     serializedVersion: 2
-    m_Bits: 704
-  boxSize: {x: 1, y: 1}
+    m_Bits: 2752
+  boxSize: {x: 1, y: 1, z: 0}
 --- !u!95 &6975501177200269741
 Animator:
   serializedVersion: 4
@@ -865,7 +866,7 @@ MonoBehaviour:
   groundObjects:
     serializedVersion: 2
     m_Bits: 704
-  boxSize: {x: 1, y: 1}
+  boxSize: {x: 1, y: 1, z: 0}
 --- !u!95 &6975501177340796860
 Animator:
   serializedVersion: 4

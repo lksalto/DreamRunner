@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Raul.unity
     guid: 5d35e654a2da8354e9a9ad55d21805f4
   - enabled: 1
-    path: Assets/Scenes/LvlTeste.unity
+    path: Assets/Scenes/Lvl1proto.unity
     guid: 7b7183e751e4cc04481bd30745ee4684
   - enabled: 1
     path: Assets/Scenes/LvlCombatTeste.unity
