@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Player_Movement : MonoBehaviour
 {
-    [SerializeField] SoundManager sm;
-
     public float moveSpeed;
     public float jumpForce;
     public int maxjumpCount = 1;
@@ -91,9 +89,7 @@ public class Player_Movement : MonoBehaviour
         moveDirection = Input.GetAxis("Horizontal");
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            sm.PlayJumpSound();
             isJumping = true;
-            
         }
 
         if (Input.GetKeyDown(KeyCode.M))
