@@ -12,7 +12,8 @@ public class enemyAIcomplex : MonoBehaviour
     public float mvspdbkup;
     public float deaceleration;
     public bool jumped;
-
+    private bool isFacingRight = true;
+    private Animator anim;
     public bool grounded;
     public Transform Groundcheck;
     public LayerMask groundlayers;
@@ -23,6 +24,7 @@ public class enemyAIcomplex : MonoBehaviour
         mvspdbkup = moveSpeed;
         moveSpeed = 0;
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
     private void Update()
     {
@@ -47,6 +49,15 @@ public class enemyAIcomplex : MonoBehaviour
             jumped = true;
             Wallfind.GetComponent<EnemyWalFinder>().Walled += 1;
         }
+
+        if (rb.velocity.x > 0 && !isFacingRight)
+        {
+            FlipCharacter();
+        }
+        else if (rb.velocity.x < 0 && isFacingRight)
+        {
+            FlipCharacter();
+        }
     }
     void AnotherJumpTime()
     {
@@ -56,5 +67,10 @@ public class enemyAIcomplex : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == 6 && jumped && grounded) { AnotherJumpTime(); }
+    }
+    private void FlipCharacter()
+    {
+        isFacingRight = !isFacingRight;
+        transform.Rotate(0f, 180f, 0f);
     }
 }
