@@ -444,8 +444,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.031933144, y: 0.00018756096}
-  m_Size: {x: 0.16723599, y: 0.626498}
+  m_Offset: {x: 0.06193718, y: -0.007813579}
+  m_Size: {x: 0.27525023, y: 1.0105497}
   m_Direction: 0
 --- !u!50 &1490824475641584469
 Rigidbody2D:
@@ -599,11 +599,11 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03193314, y: 0.000187561}
-  m_Size: {x: 0.167236, y: 0.626498}
+  m_Offset: {x: 0.06193718, y: -0.007813579}
+  m_Size: {x: 0.27525023, y: 1.0105497}
   m_Direction: 0
 --- !u!114 &3341307144366299688
 MonoBehaviour:
@@ -680,8 +680,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 2.6, y: 0.79}
+  m_Offset: {x: 0.03646588, y: -0.052096907}
+  m_Size: {x: 3.6732414, y: 0.8942165}
   m_Direction: 1
 --- !u!1 &3341307145331184182
 GameObject:
@@ -777,7 +777,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3341307146194065944}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.028, z: 0}
+  m_LocalPosition: {x: 0.01, y: -0.014, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -810,8 +810,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.04195407, y: 0.09000004}
-  m_Size: {x: 0.43390995, y: 0.21000175}
+  m_Offset: {x: 0.06539758, y: -0.016801063}
+  m_Size: {x: 0.4807978, y: 0.47570467}
   m_Direction: 1
 --- !u!1 &8422278271358772011
 GameObject:
@@ -837,7 +837,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8422278271358772011}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.004, y: 0.146, z: 0}
+  m_LocalPosition: {x: 0.006, y: 0.005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
