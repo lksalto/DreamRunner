@@ -77,13 +77,22 @@ public class Player_Movement : MonoBehaviour
         if (moveDirection > 0 && !isFacingRight)
         {
             FlipCharacter();
-            anim.SetBool("walking", true);
+            anim.SetBool("walking", isGrounded);
+            anim.SetBool("jumping", !isGrounded);
         }
         else if (moveDirection < 0 && isFacingRight)
         {
             FlipCharacter();
-            anim.SetBool("walking", true);
-        } else if (moveDirection == 0)anim.SetBool("walking", false);
+            anim.SetBool("walking", isGrounded);
+            anim.SetBool("jumping", !isGrounded);
+        }
+        else if (moveDirection == 0)
+        {
+            anim.SetBool("walking", false);
+            anim.SetBool("jumping", !isGrounded);
+        }
+
+        
     }
 
     private void ProcessarInputs()
