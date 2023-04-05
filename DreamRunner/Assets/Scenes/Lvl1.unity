@@ -16527,9 +16527,33 @@ PrefabInstance:
       propertyPath: bounceforce.z
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 6975501177200269719, guid: f0e02a7a5a12e7d46bf481466780ad7a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975501177200269736, guid: f0e02a7a5a12e7d46bf481466780ad7a, type: 3}
+      propertyPath: m_Size.x
+      value: 0.192
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975501177200269736, guid: f0e02a7a5a12e7d46bf481466780ad7a, type: 3}
+      propertyPath: m_Size.y
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975501177200269736, guid: f0e02a7a5a12e7d46bf481466780ad7a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -235450534, guid: bcaf69b6e556eb741a0810ca368af176, type: 3}
+    - target: {fileID: 6975501177200269736, guid: f0e02a7a5a12e7d46bf481466780ad7a, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6975501177200269740, guid: f0e02a7a5a12e7d46bf481466780ad7a, type: 3}
       propertyPath: maxjumpCount
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975501177340796863, guid: f0e02a7a5a12e7d46bf481466780ad7a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0e02a7a5a12e7d46bf481466780ad7a, type: 3}

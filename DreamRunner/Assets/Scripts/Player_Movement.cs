@@ -20,7 +20,7 @@ public class Player_Movement : MonoBehaviour
     private bool isFacingRight = true;
     private float moveDirection;
     private bool isJumping = false;
-    private bool isGrounded;
+    public bool isGrounded;
 
     private Animator anim;
     private void Awake()
@@ -36,10 +36,23 @@ public class Player_Movement : MonoBehaviour
         ProcessarInputs();
 
         //Animar
-        Animar();
-
-        
-
+        if (moveDirection > 0 && !isFacingRight)
+        {
+            FlipCharacter();
+            anim.SetBool("walking", isGrounded);
+            anim.SetBool("falling", !isGrounded);
+        }
+        else if (moveDirection < 0 && isFacingRight)
+        {
+            FlipCharacter();
+            anim.SetBool("walking", isGrounded);
+            anim.SetBool("falling", !isGrounded);
+        }
+        else if (moveDirection == 0)
+        {
+            anim.SetBool("walking", false);
+        }
+        if (rb.velocity.y < 0) { anim.SetBool("falling", true); }
     }
 
 
@@ -52,6 +65,9 @@ public class Player_Movement : MonoBehaviour
         if (isGrounded)
         {
             jumpCount = maxjumpCount;
+            anim.SetBool("jumping", false);
+            anim.SetBool("falling", false);
+
         }
 
         //mover
@@ -72,28 +88,11 @@ public class Player_Movement : MonoBehaviour
         isJumping = false;
     }
 
-    private void Animar()
-    {
-        if (moveDirection > 0 && !isFacingRight)
-        {
-            FlipCharacter();
-            anim.SetBool("walking", isGrounded);
-            anim.SetBool("jumping", !isGrounded);
-        }
-        else if (moveDirection < 0 && isFacingRight)
-        {
-            FlipCharacter();
-            anim.SetBool("walking", isGrounded);
-            anim.SetBool("jumping", !isGrounded);
-        }
-        else if (moveDirection == 0)
-        {
-            anim.SetBool("walking", false);
-            anim.SetBool("jumping", !isGrounded);
-        }
 
         
-    }
+
+        
+    
 
     private void ProcessarInputs()
     {
@@ -102,7 +101,8 @@ public class Player_Movement : MonoBehaviour
         {
             sm.PlayJumpSound();
             isJumping = true;
-            
+            anim.SetBool("jumping", true);
+
         }
 
         if (Input.GetKeyDown(KeyCode.M))
