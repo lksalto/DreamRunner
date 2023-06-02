@@ -52,7 +52,7 @@ public class Player_Movement : MonoBehaviour
         {
             anim.SetBool("walking", false);
         }
-        if (rb.velocity.y < 0) { anim.SetBool("falling", true); }
+        if (rb.velocity.y >= -0.001&& rb.velocity.y >= 0.001){ anim.SetBool("falling", true); }
     }
 
 
